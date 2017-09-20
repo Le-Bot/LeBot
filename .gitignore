@@ -106,4 +106,4 @@ venv.bak/
 .idea
 .vscode
 
-lebot/config.py
+source.sh
