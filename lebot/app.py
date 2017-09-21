@@ -7,7 +7,7 @@ import factory
 app = Flask(__name__)
 
 
-@app.route("/listening", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def hears():
     slack_event = json.loads(request.data)
 
