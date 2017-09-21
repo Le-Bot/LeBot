@@ -4,6 +4,7 @@ class BotUser(object):
         self.name = kwargs.get('name')
         self.token = kwargs.get('token')
         self.at = '<@{user}>'.format(user=self.id)
+        self.verification_token = kwargs.get('verification_token')
 
     def is_me(self, name):
         return self.name == name
@@ -13,3 +14,6 @@ class BotUser(object):
 
     def is_by_me(self, id):
         return self.id == id
+
+    def token_verification(self, token):
+        return self.verification_token == token
